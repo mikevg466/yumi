@@ -1,7 +1,7 @@
 import update from 'immutability-helper';
 import types from '../actions/types';
 
-const initialState = {
+export const initialState = {
   name: 'world',
   greeting: 'hello',
 };

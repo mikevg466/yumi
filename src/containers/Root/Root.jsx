@@ -8,7 +8,7 @@ import { RootComponent } from '../../components/Root';
  * Root React Container to be initialized in the main index.js file
  * @extends Component
  */
-class RootContainer extends Component {
+export class RootContainer extends Component {
   /**
    * React Render
    * @return {JSX}
@@ -18,12 +18,12 @@ class RootContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
+export const mapStateToProps = ({ user }) => ({
   name: user.name,
   greeting: user.greeting,
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(UserActions, dispatch),
 });
 
