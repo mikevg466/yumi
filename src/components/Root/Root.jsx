@@ -1,23 +1,30 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import logo from '../../assets/images/logo.svg';
 import './Root.css';
 
 /**
- * Root React Component to be initialized in the main index.js file
+ * Root React Component containing the presentational Root
  * @extends PureComponent
  */
-class Root extends PureComponent {
+class RootComponent extends PureComponent {
   /**
    * React Render
    * @return {JSX}
    */
   render() {
+    const { greeting, name, actions } = this.props;
     return (
       <div className='Root'>
         <header className='Root-header'>
           <img alt='logo' className='Root-logo' src={logo} />
           <p>
-            Edit <code>src/Root.js</code> and save to reload.
+            {`${greeting} `}
+            <input
+              onChange={e => actions.setName(e.target.value)}
+              value={name}
+            />
+            {'!'}
           </p>
           <a
             className='Root-link'
@@ -33,4 +40,10 @@ class Root extends PureComponent {
   }
 }
 
-export default Root;
+RootComponent.propTypes = {
+  name: PropTypes.string,
+  greeting: PropTypes.string,
+  actions: PropTypes.object,
+};
+
+export default RootComponent;
