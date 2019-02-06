@@ -10,7 +10,9 @@
       "plugin:jest/recommended"
     ],
     "globals": {
-      "process": true
+      "process": true,
+      "module": true,
+      "__dirname": true
     },
     "parserOptions": {
         "ecmaFeatures": {
