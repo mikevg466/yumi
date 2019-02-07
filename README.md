@@ -1,8 +1,8 @@
-# React Redux Boiler
+# Yumi
 
-A boilerplate for future projects with a fleshed out folder structure.  Uses React and Redux on the front-end, and has an Express server for the back-end.
+Yumi is a food calendar app to hold personal recipes and create a schedule for when to cook different meals.
 
-To learn more about the process and how to contribute, see the [Contribution Guide](https://github.com/mikevg466/react-redux-boiler/blob/master/CONTRIBUTING.md)
+To learn more about the process and how to contribute, see the [Contribution Guide](https://github.com/mikevg466/yumi/blob/master/CONTRIBUTING.md)
 
 ## Table of Contents
 1. [Available Scripts](#available-scripts)
