@@ -1,11 +1,11 @@
 import React from 'react';
-import render from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import { bindActionCreators } from 'redux';
 import {
   RootContainer,
   mapStateToProps,
   mapDispatchToProps,
-} from '../../containers/Root/Root';
+} from '../../containers/Root';
 import { UserActions } from '../../actions';
 import mockStore from '../../__mocks__/initialStore';
 
@@ -13,8 +13,8 @@ const mockDispatchers = bindActionCreators(UserActions, jest.fn());
 
 describe('Root Container', () => {
   it('renders correctly', () => {
-    const tree = render.create(<RootContainer />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<RootContainer />);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   describe('mapStateToProps', () => {

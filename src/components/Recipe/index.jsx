@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
  * Recipe React Component containing the presentational Recipe
  * @extends PureComponent
  */
-class RecipeComponent extends PureComponent {
+export default class RecipeComponent extends PureComponent {
   /**
    * React Render
    * @return {JSX}
@@ -39,5 +39,3 @@ RecipeComponent.propTypes = {
   ingredients: PropTypes.array,
   steps: PropTypes.array,
 };
-
-export default RecipeComponent;

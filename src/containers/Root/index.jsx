@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { UserActions } from '../../actions';
-import { RootComponent } from '../../components/Root';
+import RootComponent from '../../components/Root';
 
 /**
  * Root React Container to be initialized in the main index.js file

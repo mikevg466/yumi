@@ -1,33 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Root Component redners 1`] = `
-<div
-  className="Root"
->
-  <header
-    className="Root-header"
-  >
-    <img
-      alt="logo"
-      className="Root-logo"
-      src="logo.svg"
-    />
-    <p>
-      testGreeting 
-      <input
-        onChange={[Function]}
-        value="testName"
-      />
-      !
-    </p>
-    <a
-      className="Root-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Learn React
-    </a>
-  </header>
-</div>
+exports[`Root Component renders 1`] = `
+"<div className=\\"Root\\">
+  <Connect(RecipeContainer) />
+</div>"
 `;

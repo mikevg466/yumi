@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { RecipeComponent } from '../../components/Recipe';
+import RecipeComponent from '../../components/Recipe';
 
 /**
  * Recipe React Container to be used as the Recipe page
