@@ -30,7 +30,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint"
+    "*.{js,jsx}": "eslint --fix"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",

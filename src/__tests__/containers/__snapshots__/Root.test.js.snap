@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Root Container renders correctly 1`] = `"<RootComponent />"`;
+exports[`Root Container renders correctly 1`] = `"<RootComponent name=\\"world\\" greeting=\\"hello\\" setName={[Function: mockConstructor]} setGreeting={[Function: mockConstructor]} />"`;

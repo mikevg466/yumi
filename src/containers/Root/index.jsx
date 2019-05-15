@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { UserActions } from '../../actions';
+import { setName, setGreeting } from '../../actions/user';
 import RootComponent from '../../components/Root';
 
 /**
@@ -23,9 +22,10 @@ export const mapStateToProps = ({ user }) => ({
   greeting: user.greeting,
 });
 
-export const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(UserActions, dispatch),
-});
+export const mapDispatchToProps = {
+  setName,
+  setGreeting,
+};
 
 export default connect(
   mapStateToProps,

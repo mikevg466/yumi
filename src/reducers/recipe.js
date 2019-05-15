@@ -1,6 +1,6 @@
 import types from '../actions/types';
 
-export const initialState = {
+export const recipeInitialState = {
   name: 'Teriyaki Pulled Pork',
   typeTags: ['Pork', 'Asian'],
   cookMethodTags: ['Slow Cooker'],
@@ -25,18 +25,18 @@ export const initialState = {
 
 /**
  * The main user reducer function to be exported
- * @param  {Object} [state=initialState]
+ * @param  {Object} [state=recipeInitialState]
  *    The current user store to be manipulated.
  *    If null, then the default initial state.
  * @param  {Object} action
  *    The reducer action, containing the action type and data to be processed.
  * @return {Object} The updated user state.
  */
-export default function recipeReducer(state = initialState, action) {
+export default function recipeReducer(state = recipeInitialState, action) {
   switch (action.type) {
     case types.SELECT_RECIPE:
-      return action.recipe || initialState;
+      return action.recipe || Object.assign({}, state);
     default:
-      return state;
+      return Object.assign({}, state);
   }
 }

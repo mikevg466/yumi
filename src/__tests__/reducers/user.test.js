@@ -1,49 +1,37 @@
-import { createStore } from 'redux';
-import userReducer, { initialState } from '../../reducers/user';
+import userReducer, { userInitialState } from '../../reducers/user';
 import types from '../../actions/types';
 
-const getExpectedState = newState => Object.assign({}, initialState, newState);
+const getExpectedState = newState =>
+  Object.assign({}, userInitialState, newState);
 
 describe('User Reducer', () => {
-  describe('initial state', () => {
-    let store;
-    beforeEach(() => {
-      store = createStore(userReducer);
-    });
+  it('has the correct initial state', () => {
+    expect(userReducer(undefined, {})).toEqual(userInitialState);
+  });
 
-    it('has the correct initial state', () => {
-      expect(store.getState()).toEqual(initialState);
+  describe('SET_NAME', () => {
+    it('returns the correct state', () => {
+      const name = 'testName';
+      const expectedState = getExpectedState({ name });
+      const action = {
+        type: types.SET_NAME,
+        name,
+      };
+
+      expect(userReducer(undefined, action)).toEqual(expectedState);
     });
   });
 
-  describe('reducers', () => {
-    let store;
-    beforeEach(() => {
-      store = createStore(userReducer);
-    });
-
-    it('SET_NAME processes correctly', () => {
-      const testName = 'testName';
-      const action = {
-        type: types.SET_NAME,
-        name: testName,
-      };
-
-      store.dispatch(action);
-      expect(store.getState()).toEqual(getExpectedState({ name: testName }));
-    });
-
-    it('SET_GREETING processes correctly', () => {
-      const testGreeting = 'testGreeting';
+  describe('SET_GREETING', () => {
+    it('returns the correct state', () => {
+      const greeting = 'testGreeting';
+      const expectedState = getExpectedState({ greeting });
       const action = {
         type: types.SET_GREETING,
-        greeting: testGreeting,
+        greeting,
       };
 
-      store.dispatch(action);
-      expect(store.getState()).toEqual(
-        getExpectedState({ greeting: testGreeting })
-      );
+      expect(userReducer(undefined, action)).toEqual(expectedState);
     });
   });
 });
