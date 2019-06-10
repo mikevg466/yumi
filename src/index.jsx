@@ -4,11 +4,14 @@ import { RootContainer } from './containers/Root';
 import { Provider } from 'react-redux';
 import store from './store';
 import * as serviceWorker from './serviceWorker';
-import './index.css';
+import Constants from './utils/constants';
+import './stylesheets/main.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <RootContainer />
+    <div className={Constants.PROJECT_NAME}>
+      <RootContainer />
+    </div>
   </Provider>,
   document.getElementById('root')
 );

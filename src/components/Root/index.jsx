@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import RecipeContainer from '../../containers/Recipe';
-import './Root.css';
+import './Root.scss';
 
 /**
  * Root React Component containing the presentational Root
@@ -13,7 +13,7 @@ export default class RootComponent extends PureComponent {
    */
   render() {
     return (
-      <div className='Root'>
+      <div className='root'>
         <RecipeContainer />
       </div>
     );
