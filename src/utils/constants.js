@@ -1,3 +1,3 @@
 export default {
-  PROJECT_NAME: 'react-redux-boiler',
+  PROJECT_NAME: 'yumi',
 };
